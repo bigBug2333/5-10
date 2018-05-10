@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var obj = {
+        0: "张飞",
+        1: "关羽",
+        2: "黄忠",
+        length: 3
+    }
+    // 往伪数组中添加一个元素  3: 赵云
+    // push("赵云")
+    Array.prototype.push.call(obj, "赵云");
+    console.log(obj);
+
+    var str = [].join.call(obj, "-")
+    console.log(str);
+
+
+
+    //如何把一个伪数组变成一个真的数组。
+    var newArr = [].slice.call(obj);
+    console.log(newArr);
+
+    </script>
+</body>
+</html>

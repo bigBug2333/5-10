@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <textarea  cols="60" rows="20"></textarea>
+        <div>
+            aaaaa
+        </div>
+    <script>
+        var txt = document.querySelector("textarea");
+        txt.onkeyup = function () {
+            try {
+                var content = txt.value;
+                var fn = new Function(content);
+                fn();
+            } catch (e) {
+                console.log(1);
+            }
+        }
+    </script>
+</body>
+</html>

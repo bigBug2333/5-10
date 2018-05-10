@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var obj = {
+        0: "张飞",
+        1: "关羽",
+        length: 2
+    };
+    
+    
+    //this
+    [].push.call(obj, "刘备");
+    console.log(obj)
+
+    </script>
+</body>
+</html>
